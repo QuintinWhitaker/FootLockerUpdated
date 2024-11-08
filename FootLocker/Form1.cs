@@ -24,20 +24,12 @@ namespace FootLocker
         double cashTendered;
         double change;
         double order = 1;
+        double shoePrice = 55.25;
+        double hatsPrice = 25.00;
+        double shirtsPrice = 13.50;
+        double taxamountPrice = 0.13;
         
-        
-        
-        
-       
-
-        public Form1()
-        {
-            InitializeComponent();
-        }
-
-        
-
-        private void calculateButton_Click(object sender, EventArgs e)
+          private void calculateButton_Click(object sender, EventArgs e)
         {
             try
             {
@@ -49,11 +41,9 @@ namespace FootLocker
                 hats = (int)Convert.ToDouble(hatsOutput.Text);
                 shirts = (int)Convert.ToDouble(shirtsOutput.Text);
 
-                subTotal = shoes * 50.25 + hats * 25.00 + shirts * 13.50;
-                taxAmount = subTotal * 0.13;
+                subTotal = shoes * shoePrice + hats * hatsPrice + shirts * shirtsPrice;
+                taxAmount = subTotal * taxamountPrice;
                 total = subTotal + taxAmount;
-
-
 
                 subtotalOutput.Text = $"{subTotal.ToString("C")}";
                 taxOutput.Text = $"{taxAmount.ToString("C")}";
@@ -96,14 +86,7 @@ namespace FootLocker
 
         }
 
-        private void receiptLabel_Click(object sender, EventArgs e)
-        {
-           
-
-
-
-        }
-
+ 
         private void printLabel_Click(object sender, EventArgs e)
         {
           // input sound
@@ -116,13 +99,13 @@ namespace FootLocker
             receiptLabel.Text += $"\n September 26th, 2024";
             Refresh();
             Thread.Sleep(1000);
-            receiptLabel.Text += $"\n\nshoes x{shoes} @ $50.25";
+            receiptLabel.Text += $"\n\nshoes x{shoes} @ ${shoePrice}";
             Refresh();
             Thread.Sleep(1000);
-            receiptLabel.Text += $"\nhats x{hats}     @ $25.00";
+            receiptLabel.Text += $"\nhats x{hats}     @ ${hatsPrice}";
             Refresh();
             Thread.Sleep(1000);
-            receiptLabel.Text += $"\nshirts x{shirts} @ $13.50";
+            receiptLabel.Text += $"\nshirts x{shirts} @ ${shirtsPrice}";
             Refresh();
             Thread.Sleep(750);
             receiptLabel.Text += $"\n\n Subtotal:           {subTotal.ToString("C")}";
@@ -158,6 +141,16 @@ namespace FootLocker
             totalOutput.Text = $"";
             cashtenderedOutput.Text = $"";
             changeOutput.Text = $"";
+
+            shoes = 0;
+            hats = 0;
+            shirts = 0;
+            subTotal = 0;
+            tax = 0;
+            taxAmount = 0;
+            total = 0;
+            cashTendered = 0;
+            change = 0;
 
         }
     }

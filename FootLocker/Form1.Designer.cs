@@ -51,6 +51,7 @@
             this.printLabel = new System.Windows.Forms.Button();
             this.receiptLabel = new System.Windows.Forms.Label();
             this.neworderLabel = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // title
@@ -60,7 +61,7 @@
             this.title.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.title.Location = new System.Drawing.Point(13, 9);
             this.title.Name = "title";
-            this.title.Size = new System.Drawing.Size(783, 32);
+            this.title.Size = new System.Drawing.Size(631, 32);
             this.title.TabIndex = 0;
             this.title.Text = "Footlocker";
             // 
@@ -258,29 +259,37 @@
             this.receiptLabel.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.receiptLabel.Location = new System.Drawing.Point(282, 50);
             this.receiptLabel.Name = "receiptLabel";
-            this.receiptLabel.Size = new System.Drawing.Size(506, 326);
+            this.receiptLabel.Size = new System.Drawing.Size(362, 326);
             this.receiptLabel.TabIndex = 20;
-            this.receiptLabel.Click += new System.EventHandler(this.receiptLabel_Click);
             // 
             // neworderLabel
             // 
             this.neworderLabel.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.neworderLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.neworderLabel.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.neworderLabel.Location = new System.Drawing.Point(314, 391);
+            this.neworderLabel.Location = new System.Drawing.Point(277, 403);
             this.neworderLabel.Name = "neworderLabel";
-            this.neworderLabel.Size = new System.Drawing.Size(448, 33);
+            this.neworderLabel.Size = new System.Drawing.Size(367, 33);
             this.neworderLabel.TabIndex = 21;
             this.neworderLabel.Text = "New Order";
             this.neworderLabel.UseVisualStyleBackColor = false;
             this.neworderLabel.Click += new System.EventHandler(this.neworderLabel_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(736, 35);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(0, 13);
+            this.label1.TabIndex = 22;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(664, 450);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.neworderLabel);
             this.Controls.Add(this.receiptLabel);
             this.Controls.Add(this.printLabel);
@@ -336,6 +345,7 @@
         private System.Windows.Forms.Button printLabel;
         private System.Windows.Forms.Label receiptLabel;
         private System.Windows.Forms.Button neworderLabel;
+        private System.Windows.Forms.Label label1;
     }
 }
 
